@@ -1,0 +1,8 @@
+applications:
+- name: team_blue_wk1-2_ecommerce
+  path: ./dist
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+  random-route: false
+  memory: 256M
+  env:
+  FORCE_HTTPS: true

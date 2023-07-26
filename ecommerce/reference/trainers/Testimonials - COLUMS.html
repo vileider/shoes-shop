@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Gideon Roman" rel="stylesheet" type="text/css">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Gideon Roman;
+}
+
+.header {
+  background-color: #a39292;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  font-family: Lobster;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Testimonials</h2>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">5 Stars! *****
+    <p>"These Nike sneakers are amazing. They're light and feel like soft pillows 
+        on my feet when I’m running on a road or sidewalk. Plus the beanbag-like
+        technology they have for cushioning is really cool."</p></div>
+  
+  <div class="column" style="background-color:#bbb;">4 Stars! ****
+<p>"A little expensive, but these shoes made with full grain leather, but 
+    they also feature a dry mesh lining that provides climate control. Say
+    "goodbye" to sweaty feet!"</p></div>
+  <div class="column" style="background-color:#ccc;">5 Stars! *****
+<p>"These look like bowling shoes — in a good way! I ordered a half size up
+    since previous styles tended to run small. The fit is good, the soles are
+     well cushioned. The rose gold leather is truly striking, beautiful and 
+     shiny. Overall a good purchase from one of my long-time favourite brands."</p> </p></div>
+</div>
+
+ 
+</div>
+
+</body>
+</html>

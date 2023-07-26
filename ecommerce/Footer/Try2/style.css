@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grey+Qo&family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
+
+:root {
+  --footer_background: #66b032;
+  --footer_text_main: #f3f3f1;
+  --footer_text_menu: #092834;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%; /* 62.5% of 16px = 10px */
+}
+
+.container_layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 3.5fr 1.3fr;
+  border: 2px solid black;
+  height: 100vh;
+}
+
+footer {
+  background-color: var(--footer_background);
+}
+
+.container_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  position: relative; /*because we use position:absolute for the inclined effect */
+}
+
+/* Inclined effect
+.container_footer::before,
+.container_footer::after {
+  position: absolute; /*Position an element relative to it's container
+  background-color: white;
+  height: 150px;
+  width: 100%;
+  content: "";
+  left: 0px;
+  bottom: 250px;
+  transform: skewY(3.5deg);
+} 
+*/
+
+.menu_footer {
+  /* border: 2px solid red; */
+  height: 100%;
+  padding: 20px;
+  padding-top: 60px;
+  margin: 5px;
+  flex: 1;
+}
+
+.aboutus h1 {
+  font-family: "Oswald", sans-serif;
+  color: var(--footer_text_main);
+}
+
+.aboutus p {
+  margin-top: 15px;
+  font-size: 25px;
+  font-family: "Nothing You Could Do", cursive;
+  font-weight: bold;
+}
+
+.menu_footer ul {
+  display: flex;
+  padding-top: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.menu_footer ul li {
+  list-style: none;
+}
+
+.menu_footer ul li a {
+  text-decoration: none;
+  color: var(--header_text_menu);
+  font-size: 30px;
+  font-family: "Oswald", sans-serif;
+}
+
+.menu_footer ul li a:hover {
+  color: var(--footer_text_main);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo h1 {
+  font-size: 40px;
+  font-family: "Oswald", sans-serif;
+  color: var(--footer_text_main);
+}
+
+.logo h6 {
+  font-family: "Grey Qo", cursive;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  color: var(--footer_text_menu);
+}

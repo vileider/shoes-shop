@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Removes list bullets or numbers */
+    text-decoration: none; /* Links are not underlined */
+}
+
+.header{
+    width: 100%;
+    height: 100px;
+    display: block; /* If other objects exist, they will be set around the .header_image*/
+    background-color: white;
+}
+
+.inner_header{
+    width: 50%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.logo_container{
+    height: 100%;
+    float: left; /*The element floats to the left of its container*/
+    display: table; /*https://www.w3schools.com/cssref/playit.asp?filename=playcss_display&preval=table*/
+}
+
+.logo{
+    height: 100%;
+    width: 200px;
+    float: left;
+}
+
+.navigation{
+    float: right;
+    height: 100%;
+}
+
+.menu{
+    height: 100%;
+    display: table;
+}
+
+.menu li{
+    text-transform: uppercase;
+    font-size: 30px;
+    height: 100%;
+    display: inline-block;
+    padding: 0px 20px;
+    display: table-cell; /* Easy way to align */
+    vertical-align: middle;
+    background-color: white;
+}
+
+.menu li a{
+    height: 100%;
+    background-color: white;
+    color: black;
+    font-family: 'Amatic SC', cursive;
+    font-family: 'Gluten', cursive;
+    font-family: 'Grechen Fuemen', cursive;
+}
+
+.menu li:last-child{
+    padding-right: 0px;
+}
+
+.menu li a::before{
+    content: "";
+    background-color: #55DD33;
+    width: 0%;
+    height: 5px;
+    display: block;
+    transition: width 250ms;
+    transition-timing-function: ease-in-out;
+}
+
+.menu li a:hover::before{
+    width: 100%;
+} 

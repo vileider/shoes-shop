@@ -1,0 +1,73 @@
+/* Variables */
+
+:root {
+  --foto_witdh: 20rem;
+}
+
+/* Apply border-box */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* This will make it easy for us to use rem as a measure */
+html {
+  /*62.5% of 16px = 10px */
+  font-size: 62.5%;
+}
+
+.centerpage {
+  margin: 0 auto;
+  /* max-width: 1100; */
+  width: var(--foto_witdh);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+.foto__img {
+  object-fit: cover; /*images keep the correct form */
+  width: 100%;
+  height: 20rem;
+  transition: opacity 0.5s;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  color: #004d99;
+}
+
+a:hover > .foto__img {
+  opacity: 0.2;
+}
+
+a:hover > h1 {
+  max-height: 20rem;
+  opacity: 1;
+}
+
+.container__foto {
+  position: relative;
+}
+
+.container__foto h1 {
+  position: absolute;
+  /*We'll use this instead of display:none; to create an effect w/ transition property*/
+  max-height: 0; /* Here we'll have overflow */
+  overflow: hidden;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  /* Because it will center the W point and not the full word */
+  transform: translate(-50%, -50%);
+  transition: max-height 0.5s;
+  transition: opacity 0.8s;
+}

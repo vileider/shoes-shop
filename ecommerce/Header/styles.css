@@ -1,0 +1,264 @@
+/* Variable */
+:root {
+  --header_green: #501111;
+  --link_nav_hover: rgba(0, 0, 0, 0.5);
+  --link_submenu: #9b9b9b;
+}
+
+/* Apply border-box */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* This will make it easy for us to use rem as a measure */
+html {
+  /*62.5% of 16px = 10px */
+  font-size: 62.5%;
+}
+
+/* BANNER AND TOP MENU */
+
+.container__banners {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.banner_only {
+  background-color: var(--header_green);
+  padding: 1rem;
+  text-align: center;
+}
+
+.banner_only > p {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.banner_menu_logo_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 0;
+  background-color: #fff;
+  position: relative;
+}
+
+.nav_menu_left {
+  /*border: 1px solid palevioletred; */
+}
+
+.banner_menu {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.menu_left {
+  margin-left: 3rem;
+}
+
+.menu_right {
+  margin-right: 1.5rem;
+}
+
+/* .menu_left > a { */
+.link_menu {
+  text-decoration: none;
+  color: var(--header_green);
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  padding: 3rem 0;
+  /* border: 1px solid red; */
+}
+
+.menu_left:hover .men_submenu {
+  display: flex;
+}
+
+.link_menu:hover {
+  color: var(--link_nav_hover);
+}
+
+ul {
+  list-style: none;
+}
+
+.img_logo {
+  width: 100px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.arrow_down {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  position: absolute;
+}
+
+.menu_left_men {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.menu_left_men::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--header_green);
+}
+
+.menu_left_men:hover::after {
+  width: 48px;
+}
+
+.arrow_down_men {
+  left: 6.55rem;
+  top: 3.15rem;
+}
+
+.menu_left_men:hover + .men_submenu {
+  display: flex;
+}
+
+.menu_left_women {
+  display: flex;
+  /* border: 1px solid rebeccapurple; */
+  gap: 0.5rem;
+}
+
+.menu_left_women::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--header_green);
+}
+
+.menu_left_women:hover::after {
+  width: 68px;
+}
+
+.arrow_down_women {
+  left: 15.2rem;
+  top: 3.15rem;
+}
+
+/* MEN SUBMENU */
+
+.men_submenu {
+  border-top: 1px solid var(--link_submenu);
+  /* display: flex; */
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 1200px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.men_submenu_menu {
+  display: flex;
+  padding: 2rem;
+  gap: 2.5rem;
+}
+
+.men_submenu_photos {
+  display: flex;
+}
+
+.men_submenu_menu1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.men_submenu_menu2 {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+
+.men_submenu_menu3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.link_submenu_hover:hover {
+  color: var(--link_nav_hover);
+}
+
+.link_submenu {
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+  color: var(--link_submenu);
+  font-size: 1.5rem;
+}
+
+.link_submenu_bold {
+  color: var(--header_green);
+}
+
+.men_submenu_photos_container {
+  display: flex;
+  flex-direction: column;
+  width: 14rem;
+  align-items: center;
+}
+
+.men_submenu_img {
+  width: 14rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.link_submenu_img_description {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+
+/* SHOPPING CART */
+.shopping_cart {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  height: 80vh;
+  background-color: #fff;
+  padding: 2rem;
+
+  top: 0;
+  right: 0;
+  width: 400px;
+}
+
+.shopping_cart_title {
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.shopping_cart_text {
+  margin-top: 5rem;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  align-self: center;
+}
+
+/*SHOPPING CART - HOVER*/
+.link_shopping_cart:hover .shopping_cart {
+  display: flex;
+}
